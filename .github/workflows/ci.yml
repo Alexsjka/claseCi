@@ -5,8 +5,8 @@ on:
     branches: ["main"]
   pull_request:
     branches: ["main"]
-
-job:
+    
+jobs:
   validacion:
     name: crear una maquina virtual
     runs-on: ubuntu-latest
