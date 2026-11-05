@@ -2,21 +2,21 @@ name: validacion pagina
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "prueba"]
   pull_request:
     branches: ["main"]
-    
+
 jobs:
   validacion:
     name: crear una maquina virtual
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
-      - name: clonar respositorio
-        uses: actions/checkout@v4
-      
+      - name: clonar repositorio
+        uses: actions/checkout@v7
+
       - name: instalar node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
 
